@@ -1,0 +1,122 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style7 {color: #FFFF00}
+        .style8 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View All Profile Status Prediction Type !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                                 <table border="5" bordercolor="#FF00FF">
+
+
+                                   <tr>
+
+                                    <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">prof_idno</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Profiel Name</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">screen_name</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">statuses_count</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">followers_count</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">friends_count</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">created_at</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">location</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">default_profile</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">prf_image_url</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">prf_banner_url</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">prf_bgimg_https</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">prf_text_color</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">profile_image_url_https</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">prf_bg_title</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">profile_background_image_url</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">description</span></div></td>
+                                       <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Prf_updated</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Prediction</span></div></td>
+
+
+                      </tr>
+                            {% for object in objs %}
+                      <tr>
+
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.prof_idno}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.name}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.screen_name}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.statuses_count}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.followers_count}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.friends_count}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.created_at}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.location}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.default_profile}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.prf_image_url}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.prf_banner_url}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.prf_bgimg_https}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.prf_text_color}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.profile_image_url_https}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.prf_bg_title}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.profile_background_image_url}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.description}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Prf_updated}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Prediction}}</div></td>
+
+                        </tr>
+                                        {% endfor %}
+                      </table>
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

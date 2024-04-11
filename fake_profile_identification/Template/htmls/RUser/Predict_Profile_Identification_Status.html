@@ -1,0 +1,199 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 142px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {color: #FF0000}
+.style8 {font-weight: bold}
+.style10 {color: #FFFF00}
+        .style12 {color: #FFFF00; font-weight: bold; }
+        .style13 {
+	color: #FFFF00;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">PREDICT PROFILE IDENTIFICATION STATUS TYPE!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1122" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style13">ENTER ALL PROFILE ATTRIBUTE DETAILS HERE !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10"><br>
+                                    Enter Profiel Idno</span></strong></div></td>
+                                    <td width="240"><div align="center">
+                                      <input type="text" name="prof_idno">
+                                    </div></td>
+                                    <td width="319" bgcolor="#FF0000"><span class="style12">Enter Name</span></td>
+                                    <td width="254"><div align="center">
+                                      <input type="text" name="name">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Screen Name</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="screen_name">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><span class="style12">Enter Statuses Count</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="statuses_count">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Followers Count</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="followers_count">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><span class="style12">Enter Friends Count</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="friends_count">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Created_at</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="created_at">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><span class="style12">Enter Location </span></td>
+                                    <td><div align="center">
+                                      <textarea name="location"></textarea>
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Default Profile</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="default_profile">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><span class="style12">Enter Profiel Image url</span></td>
+                                    <td><div align="center">
+                                      <textarea name="prf_image_url"></textarea>
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Profile Banner url</span></strong></div></td>
+                                    <td><div align="center">
+                                      <textarea name="prf_banner_url"></textarea>
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><span class="style12">Enter Profile BG image https</span></td>
+                                    <td><div align="center">
+                                      <textarea name="prf_bgimg_https"></textarea>
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Profile Text Color</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input name="prf_text_color" type="text" value="">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><span class="style12">Enter Profile Image url https</span></td>
+                                    <td><div align="center">
+                                      <textarea name="profile_image_url_https"></textarea>
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Profile BG Title</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="prf_bg_title">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><span class="style12">Enter Profile background Image url</span></td>
+                                    <td><div align="center">
+                                      <textarea name="profile_background_image_url"></textarea>
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter description</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="description">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><span class="style12">Enter Profile Updated</span></td>
+                                    <td><div align="center">
+                                      <textarea name="Prf_updated"></textarea>
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FFFFFF"><div align="center"></div></td>
+                                    <td><div align="center"></div></td>
+                                    <td><input name="submit" type="submit" class="style1" value="Predict Profile Type"></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                               <table border="5" align="center" bordercolor="#FF00FF">
+
+                    <tr><td width="312" bgcolor="#FFFF00"><div align="center"><strong><span class="style8 style6">PROFILE TYPE PREDICTION STATUS::</span></strong></div></td>
+                          <td width="242" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">------{{objs}} ------ </div></td>
+
+                        </tr>
+
+
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
